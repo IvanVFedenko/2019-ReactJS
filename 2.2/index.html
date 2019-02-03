@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component without JSX</title>
+
+  <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const Article = React.createClass ({
+  render () {
+    const {
+      title,
+      author,
+      text,
+      likes,
+      retweets
+    } = this.props;
+
+    return (
+<div id="BLOCK">
+      <h3>{title}</h3>
+      <h5>{author}</h5>
+      <p>{text}</p>
+
+  <div className="ArticleComments">
+      <i className="fa fa-comments-o" />
+      {retweets}
+  </div>
+
+  <div className="ArticleLikes">
+      <i className="fa fa-heart" />
+      {likes}
+  </div>
+</div>
+
+    );
+  }
+});
+
+ReactDOM.render (
+
+  <Article
+    title="Component with JSX"
+    author="by John Snow"
+    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur   adipisicing elit."
+    likes={200}
+    retweets={500}
+  />,
+  document.getElementById ('root')
+)
+
+</script>
+
+</body>
+</html>

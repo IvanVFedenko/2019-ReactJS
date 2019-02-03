@@ -1,0 +1,83 @@
+.tweet-likes {
+  cursor: pointer;
+  color: grey;
+  margin-left: 32px;
+  float:left;
+}
+
+.tweet-likes :hover {
+  color: red;
+}
+
+
+
+.tweet-retweets {
+  cursor: pointer;
+  color: grey;
+  margin-left: 32px;
+  float:left;
+}
+
+.tweet-retweets :hover {
+  color: green;
+}
+
+.tweet-stat-icon {
+  margin-right: 8px;
+  color: grey;
+
+}
+
+.tweet-stat-icon-likes {
+  margin-right: 8px;
+  color: red;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.tweet {
+  display: flex;
+  align-items: flex-start;
+  justify-content:  flex-start;
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+.tweet-avatar {
+  max-width: 80px;
+  border-radius: 40px;
+}
+
+.tweet-body {
+  margin-left: 16px;
+  max-width: 500px;
+}
+
+.tweet-author {
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.tweet-text {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-top: 8px;
+  margin-bottom: 8px
+}
+
+.tweet-stats {
+  margin-top: 8px;
+  font-size: 20px;
+  display: flex;
+}
+.tweet-image {
+  width: 400px;
+	height: 250px;
+}

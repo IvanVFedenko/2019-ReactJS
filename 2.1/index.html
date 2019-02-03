@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component without JSX</title>
+
+  <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div id="root"></div>
+
+<script>
+
+const Article = React.createClass ({
+  render () {
+      return React.createElement ('div', {},
+      React.createElement ('h3', {}, "Component without JSX"),
+      React.createElement ('h5', {}, "by John Snow"),
+      React.createElement ('p', {style: {width: '400' }}, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,")
+   );
+  }
+});
+
+ReactDOM.render (
+  React.createElement (Article),
+  document.getElementById ('root')
+)
+
+</script>
+
+</body>
+</html>
