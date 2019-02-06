@@ -33,9 +33,9 @@
                   },
 
                   render(){
-                    let imageClassName = 'front';
+                    let imageClassName = 'flip-container';
                     if (!this.state.flip){
-                      imageClassName = 'back';
+                      imageClassName += ' backSide';
                     }
                     return(
                       <div className={imageClassName} onClick={this.handleChange}>
