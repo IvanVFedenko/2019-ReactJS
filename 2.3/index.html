@@ -38,7 +38,10 @@
                       imageClassName = 'back';
                     }
                     return(
-                      <div className='imageClassName' onClick={this.handleChange}></div>
+                      <div className={imageClassName} onClick={this.handleChange}>
+                        <div className="front"/>
+                        <div className="back"/>
+                      </div>
                     );
                   }
                 });
