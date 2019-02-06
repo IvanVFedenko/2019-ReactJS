@@ -246,13 +246,13 @@ const Group = React.createClass({
         {
           avatar ? <img className="group-avatar" src={avatar } /> : null
         }
-          <div>
-                <a className="group-name">
-                 {name}
-                 </a>
-                 <div className="place">
-                 <i className="fa fa-map-marker map" /> <p className="city"> Дніпро </p>
-                 </div>
+        <div className="All">
+          <div className="group-name">
+            {name}
+          </div>
+          <div className="place">
+            <i className="fa fa-map-marker map" /> <p className="city"> Дніпро </p>
+          </div>
 
             <div className="group-stats">
                  <div className="face">
