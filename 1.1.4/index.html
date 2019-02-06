@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>1.1.4</title>
+
+          <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+          <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+          <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+
+
+        </head>
+
+        <body>
+
+          /*
+          * #4
+          * Получить из данного массива пользователей
+          * распределение по интересам
+          * EX: { computers: 3, food: 5, math: 1, cats: 3 }
+          * где ключ соответствует названию интреса
+          * а значение - количество людей с таким интересом
+          */
+
+
+          const users = [{
+            name: 'Vasya',
+            surname: 'Ivanov',
+            interests: ['computers', 'food']
+          }, {
+            name: 'Ivan',
+            surname: 'Tretyakov',
+            interests: ['computers', 'food', 'cars']
+          }, {
+            name: 'Daryna',
+            surname: 'Petrova',
+            interests: ['cars', 'math']
+          }, {
+            name: 'Petro',
+            surname: 'Nalyvaiko',
+            interests: ['computers', 'food', 'math']
+          }];
+
+          interests = (arr) => {
+            return users.reduce((preValue, currValue) => {
+              currValue.interests.forEach((el) => {
+                isNaN(prevValue[el]) ? prevValue[el] = 1 : prevValue[el] += 1
+              });
+
+              return prevValue
+            }, {});
+          }
+
+          console.log(interests(users));
+
+
+
+
+</body>
+</html>
