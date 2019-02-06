@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-          <title>Flip card</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flip card</title>
 
-          <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
-          <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
-          <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-            <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 
-            </head>
+</head>
 
-            <body>
+<body>
 
-              <div id="root"></div>
+  <div id="root"></div>
 
-              <script type="text/babel">
+  <script type="text/babel">
 
-                const Card = React.createClass ({
-                  getInitialState() {
-                    return {
-                      flip: true
-                    };
-                  },
+    const Card = React.createClass ({
+  getInitialState() {
+    return {
+      flip: 'images/man.jpg'
+    };
+  },
 
-                  handleChange(){
-                    this.setState({flip: !this.state.flip});
-                  },
+  handleClick() {
+    let newFlip = this.state.flip == 'images/man.jpg' ? 'images/wooman.jpg' :'images/man.jpg';
 
-                  render(){
-                    let imageClassName = 'flip-container';
-                    if (!this.state.flip){
-                      imageClassName += ' backSide';
-                    }
-                    return(
-                      <div className={imageClassName} onClick={this.handleChange}>
-                        <div className="front"/>
-                        <div className="back"/>
-                      </div>
-                    );
-                  }
-                });
+    this.setState ({
+      flip: newFlip
+    });
+  },
 
+  render() {
+    return (
+      <div id="BLOCK">
+      <img src={this.state.flip} height={600}
+       onClick={this.handleClick}
+       />
+      </div>
+    );
+  }
+});
 
-                        ReactDOM.render (
-                        <Card/>,
+ReactDOM.render (
+  <Card/>,
   document.getElementById ('root')
 )
 
