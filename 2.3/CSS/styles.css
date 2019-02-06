@@ -1,26 +1,12 @@
 
-#BLOCK {
-
-
-	width: 400px;
-	height: 300px;
-  text-align: justify;
-	text-indent: 30px;
-  font-style: italic;
-	background-size: cover
-  
-
+.front{
+    background-image: url('https://www.mirfutbolok.org.ua/files/products/674534.800x600w.jpg?a4ac0208dd99c95974cb59dfd4f8446e');
+    height: 225px;
+    width: 225px;
 }
 
-div.ArticleComments{
-	float:left;
+.back{
+    background-image: url('https://www.mirfutbolok.org.ua/files/products/8785868979.800x600w.jpg?3b60fc140894013b8f5abf04086372f9');
+    height: 225px;
+    width: 225px;
 }
-
-div.ArticleLikes {
-	float:left;
-}
-.flip-animation {
-
-
-
- }
