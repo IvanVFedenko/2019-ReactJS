@@ -56,7 +56,7 @@ const STUDENTS = [
         email: "igor.gripas@ardas.dp.ua"
     },
     {
-        slack: "-",
+        slack: "shjsj",
         name: "Грушко Александр",
         avatar: "https://github.com/AleksanderGruszko.png",
         github: "https://github.com/AleksanderGruszko",
@@ -66,7 +66,7 @@ const STUDENTS = [
     {
         slack: "yes",
         name: "Єфремова Світлана ",
-
+        avatar: "https://github.com/svitlanaiefremova.png",
         github: "https://github.com/svitlanaiefremova",
         facebook: "https://www.facebook.com/yefremova.svetlana",
         email: "yefremovasveta@gmail.com"
@@ -88,9 +88,9 @@ const STUDENTS = [
         email: "hkovalenko9@gmail.com"
     },
     {
-        slack: "-",
+        slack: "lkbl\zkn",
         name: "Коваль Юрий",
-        
+        avatar: "https://github.com/-.png",
         github: "https://github.com/-",
         facebook: "-",
         email: "koval.iurii@gmail.com"
