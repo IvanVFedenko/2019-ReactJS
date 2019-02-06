@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1.1.2</title>
+
+  <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+  <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+  <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+<script>
+
+/*
+ * #2
+ * Получить из данного массива пользователей
+ * только тех, кто старше определенного возраста
+*/
+
+
+    const users = [
+        { id: 1, age: 21, name: 'Vasya', surname: 'Vasiliev' },
+        { id: 2, age: 28, name: 'Ivan', surname: 'Ivanov' },
+        { id: 3, age: 18, name: 'Irina', surname: 'Plushkina' }
+    ];
+userOlder = (age, user) => {
+  return user.filter((key) => {return key.age > age});
+};
+console.log(userOlder(20, users));
+
+
+
+</script>
+
+</body>
+</html>
